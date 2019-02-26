@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Word Guess Game!</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Farsan|Sigmar+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="header-container">
+        <!-- Header elements for large screens... -->
+        <h1 id="header-name-lg">Name</h1>
+        <span id="header-that-lg">That</span>
+        <h1 id="header-dog-lg">Dog</h1>
+
+        <!-- Header elements for small screens -->
+        <h1 id="header-sm">Name That Dog</h1>
+    </div>
+
+    <div class="container">
+        <!-- Row 1 - Starter Text -->
+        <div class="row">
+            <div class="col-12">
+                <h2 id="starter-text" class="text-center">Press any key to get started!</h2>
+            </div>
+        </div>
+
+        <!-- Row 2 - Image on left, current word info on right -->
+        <div class="row">
+            <div class="col-6 text-center border p-3">
+                <!-- <h4 class="text-center">Guess this dog's Name!</h4> -->
+                <img id="dog-img" class="img-fluid img-thumbnail" src="assets/images/buster.jpg" alt="">
+            </div>
+            <div class="col-6 border p-3">
+                <h4 class="text-center">Guess this dog's name!</h4> <br>
+                <h3 id="current-word-text" class="text-center"></h3> <br>
+                <h4 id="you-win-text"></h4>
+            </div>
+        </div>
+
+        <!-- Row 3 - Letters guessed and win count on left, remaining guesses on right -->
+        <div class="row">
+            <div class="col-6 border px-0">
+                <div class="letters-guessed-container pt-0">
+                    <h4 id="letters-guessed-text">Letters Already Guessed: </h4>
+                </div>
+                <div class="wins-text-container text-white pt-3">
+                    <h4 id="wins-text">Wins:</h4>
+                </div>
+            </div>
+
+            <!-- Guess remaining -->
+            <div class="col-6 border">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="text-center">Guesses Remaining:</h4>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="rounded p-3" id="custom-number-box">
+                        <span id="guesses-remaining-text" class="text-center mb-0"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4 - New Game Button -->
+        <div class="row">
+            <div class="col-12 text-center px-0">
+                <!-- New Game Button -->
+                <button type="button" id="new-game-button" class="btn btn-secondary btn-lg mt-3 mb-5" onclick="newGame()">New
+                    Game</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Link to JS -->
+    <script src="assets/javascript/scripts.js"></script>
+</body>
+
+</html>
